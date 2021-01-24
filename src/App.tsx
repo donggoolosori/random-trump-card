@@ -38,8 +38,13 @@ const App = () => {
   // Go to next card
   const nextOnClick = () => {
     if (cardIndex < 53) {
-      const currentCard = document.querySelector(`.card${cardIndex}`);
-      currentCard?.classList.add('slide');
+      const currentCard: HTMLElement | null = document.querySelector(
+        `.card${cardIndex}`
+      );
+      currentCard?.setAttribute('style', `z-index:${cardIndex}`);
+      setInterval(() => {
+        currentCard?.classList.add('slide-right');
+      }, 20);
       setCount(count + 1);
       setCardIndex(cardIndex + 1);
     }

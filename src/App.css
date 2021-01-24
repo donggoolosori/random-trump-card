@@ -35,7 +35,11 @@
   margin: 10px;
 }
 
-.slide {
-  transform: translateX(100%);
+.slide-right {
+  transform: translateX(120%);
+  transition: all 1s ease;
+}
+.slide-left {
+  transform: translateX(-120%);
   transition: all 1s ease;
 }
