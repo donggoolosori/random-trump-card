@@ -6,15 +6,18 @@
 }
 .card-img {
   /* w : h =~ 2.25 : 3.5 */
+  position: absolute;
   width: 30vh;
   height: 47vh;
 }
 
 .card-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  min-width: 30vh;
+  min-height: 47vh;
   margin: 30px;
   margin-top: 50px;
   margin-bottom: 0;
@@ -30,4 +33,9 @@
   width: 13vh;
   padding: 10px;
   margin: 10px;
+}
+
+.slide {
+  transform: translateX(100%);
+  transition: all 1s ease;
 }

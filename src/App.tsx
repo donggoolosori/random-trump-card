@@ -3,6 +3,7 @@ import './App.css';
 import Button from '@material-ui/core/Button';
 import { Card } from './card/Card';
 import { makeStyles } from '@material-ui/core';
+import CSS from 'csstype';
 // icon
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
@@ -37,6 +38,8 @@ const App = () => {
   // Go to next card
   const nextOnClick = () => {
     if (cardIndex < 53) {
+      const currentCard = document.querySelector(`.card${cardIndex}`);
+      currentCard?.classList.add('slide');
       setCount(count + 1);
       setCardIndex(cardIndex + 1);
     }
@@ -60,11 +63,20 @@ const App = () => {
   return (
     <div className="App">
       <div className="card-container">
-        <img
-          className="card-img"
-          src={`/image/${cardSet[cardIndex]}.jpg`}
-          alt="card"
-        />
+        {cardSet.map((card, idx) => {
+          const style: CSS.Properties = {
+            zIndex: -idx,
+          };
+          return (
+            <img
+              key={idx}
+              className={`card-img card${idx}`}
+              src={`/image/${card}.jpg`}
+              alt="card"
+              style={style}
+            />
+          );
+        })}
       </div>
       <div className="counter">
         <h2>{count}/54</h2>
