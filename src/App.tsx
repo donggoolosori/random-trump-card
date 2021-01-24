@@ -30,14 +30,14 @@ const App = () => {
           src={`/image/${cardSet[cardIndex]}.jpg`}
           alt="card"
         />
-        <div className="button-container">
-          <button className="prev" onClick={prevOnClick}>
-            Previous
-          </button>
-          <button className="next" onClick={nextOnClick}>
-            Next
-          </button>
-        </div>
+      </div>
+      <div className="button-container">
+        <button className="btn prev" onClick={prevOnClick}>
+          Previous
+        </button>
+        <button className="btn next" onClick={nextOnClick}>
+          Next
+        </button>
       </div>
     </div>
   );

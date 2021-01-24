@@ -1,6 +1,13 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+}
 .card-img {
-  width: 50%;
-  height: 50%;
+  /* w : h =~ 2.25 : 3.5 */
+  width: 30vh;
+  height: 47vh;
 }
 
 .card-container {
@@ -8,4 +15,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 30px;
+  margin-top: 50px;
+}
+.button-container {
+  margin: 30px;
+}
+.btn {
+  cursor: pointer;
+  width: 13vh;
+  padding: 10px;
+  margin: 10px;
 }
