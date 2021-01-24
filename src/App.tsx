@@ -31,6 +31,14 @@ const App = () => {
   // Go to previous card
   const prevOnClick = () => {
     if (cardIndex > 0) {
+      const currentCard: HTMLElement | null = document.querySelector(
+        `.card${cardIndex - 1}`
+      );
+      currentCard?.setAttribute('style', `z-index:${-cardIndex + 1}`);
+      setTimeout(() => {
+        currentCard?.classList.remove('slide-left');
+        currentCard?.classList.add('slide-left');
+      }, 20);
       setCount(count - 1);
       setCardIndex(cardIndex - 1);
     }
@@ -42,9 +50,11 @@ const App = () => {
         `.card${cardIndex}`
       );
       currentCard?.setAttribute('style', `z-index:${cardIndex}`);
-      setInterval(() => {
-        currentCard?.classList.add('slide-right');
-      }, 20);
+      currentCard?.classList.remove('slide-left');
+      setTimeout(() => {
+        currentCard?.classList.remove('slide-right');
+        currentCard?.classList.toggle('slide-right');
+      }, 30);
       setCount(count + 1);
       setCardIndex(cardIndex + 1);
     }
