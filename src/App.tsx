@@ -2,8 +2,9 @@ import './App.css';
 import { Card } from './card/Card';
 
 const App = () => {
-  const card = new Card();
-  console.log(card.card);
+  let { card } = new Card();
+  card.sort(() => Math.random() - 0.5);
+  console.log(card);
   return <div className="App"></div>;
 };
 
