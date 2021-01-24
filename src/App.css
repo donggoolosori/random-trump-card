@@ -20,6 +20,8 @@
   margin-bottom: 0;
 }
 .button-container {
+  display: flex;
+  align-items: center;
   margin: 30px;
   margin-top: 0;
 }
