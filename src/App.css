@@ -36,7 +36,7 @@
 }
 
 .slide-right {
-  transform: translateX(120%);
+  transform: translateX(120%) rotateY(180deg);
   transition: all 1s ease;
 }
 .slide-left {

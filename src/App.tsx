@@ -38,7 +38,7 @@ const App = () => {
       setTimeout(() => {
         currentCard?.classList.remove('slide-left');
         currentCard?.classList.add('slide-left');
-      }, 20);
+      }, 40);
       setCount(count - 1);
       setCardIndex(cardIndex - 1);
     }
@@ -54,7 +54,7 @@ const App = () => {
       setTimeout(() => {
         currentCard?.classList.remove('slide-right');
         currentCard?.classList.toggle('slide-right');
-      }, 30);
+      }, 40);
       setCount(count + 1);
       setCardIndex(cardIndex + 1);
     }
