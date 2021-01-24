@@ -17,9 +17,11 @@
   align-items: center;
   margin: 30px;
   margin-top: 50px;
+  margin-bottom: 0;
 }
 .button-container {
   margin: 30px;
+  margin-top: 0;
 }
 .btn {
   cursor: pointer;
