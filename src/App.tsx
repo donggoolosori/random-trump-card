@@ -5,11 +5,10 @@ import { Card } from './card/Card';
 import { makeStyles } from '@material-ui/core';
 import CSS from 'csstype';
 // icon
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
+import CardContainer from './components/CardContainer';
 
 const backImg =
   'https://i.pinimg.com/564x/91/69/ef/9169ef73b3564976a7dc564d66861027.jpg';
@@ -86,31 +85,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="card-container">
-        {cardSet.map((card, idx) => {
-          const style: CSS.Properties = {
-            zIndex: -idx,
-          };
-          return (
-            <>
-              <img
-                key={`f${idx}`}
-                className={`front card-img card${idx}`}
-                src={`/image/${card}.jpg`}
-                alt="card"
-                style={style}
-              />
-              <img
-                style={style}
-                className={`back card-img card${idx}`}
-                key={`b${idx}`}
-                src={backImg}
-                alt="back"
-              />
-            </>
-          );
-        })}
-      </div>
+      <CardContainer cardSet={cardSet} />
+
       <div className="counter">
         <h2>{count}/54</h2>
       </div>

@@ -1,0 +1,19 @@
+.front {
+  transform: rotateY(180deg);
+}
+.card-img {
+  /* w : h =~ 2.25 : 3.5 */
+  position: absolute;
+  width: 30vh;
+  height: 47vh;
+  backface-visibility: hidden;
+}
+
+.card-container {
+  display: flex;
+  min-width: 30vh;
+  min-height: 47vh;
+  margin: 30px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
