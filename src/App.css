@@ -1,15 +1,21 @@
+* {
+  transition: all 1s ease;
+}
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5%;
 }
+.front {
+  transform: rotateY(180deg);
+}
 .card-img {
   /* w : h =~ 2.25 : 3.5 */
   position: absolute;
   width: 30vh;
   height: 47vh;
-  /* backface-visibility: hidden; */
+  backface-visibility: hidden;
 }
 .card {
   position: absolute;
@@ -38,11 +44,15 @@
   margin: 10px;
 }
 
-.slide-right {
+.b-slide-right {
   transform: translateX(120%) rotateY(180deg);
-  transition: all 1s ease;
 }
-.slide-left {
-  transform: translateX(0%);
-  transition: all 1s ease;
+.b-slide-left {
+  transform: translateX(0%) rotateY(0deg);
+}
+.f-slide-right {
+  transform: translateX(120%) rotateY(0deg);
+}
+.f-slide-left {
+  transform: translateX(0%) rotateY(180deg);
 }

@@ -48,14 +48,22 @@ const App = () => {
   // Go to next card
   const nextOnClick = () => {
     if (cardIndex < 53) {
-      const currentCard: HTMLElement | null = document.querySelector(
-        `.card${cardIndex}`
+      const front: HTMLElement | null = document.querySelector(
+        `.card${cardIndex}.front`
       );
-      currentCard?.setAttribute('style', `z-index:${cardIndex}`);
-      currentCard?.classList.remove('slide-left');
+      const back: HTMLElement | null = document.querySelector(
+        `.card${cardIndex}.back`
+      );
+      front?.setAttribute('style', `z-index:${cardIndex}`);
+      back?.setAttribute('style', `z-index:${cardIndex}`);
+
+      front?.classList.remove('f-slide-left');
+      back?.classList.remove('b-slide-left');
       setTimeout(() => {
-        currentCard?.classList.remove('slide-right');
-        currentCard?.classList.toggle('slide-right');
+        front?.classList.remove('f-slide-right');
+        front?.classList.add('f-slide-right');
+        back?.classList.remove('b-slide-right');
+        back?.classList.add('b-slide-right');
       }, 50);
       setCount(count + 1);
       setCardIndex(cardIndex + 1);
@@ -85,13 +93,22 @@ const App = () => {
             zIndex: -idx,
           };
           return (
-            <img
-              key={idx}
-              className={`card-img card${idx}`}
-              src={`/image/${card}.jpg`}
-              alt="card"
-              style={style}
-            />
+            <>
+              <img
+                key={`f${idx}`}
+                className={`front card-img card${idx}`}
+                src={`/image/${card}.jpg`}
+                alt="card"
+                style={style}
+              />
+              <img
+                style={style}
+                className={`back card-img card${idx}`}
+                key={`b${idx}`}
+                src={backImg}
+                alt="back"
+              />
+            </>
           );
         })}
       </div>
