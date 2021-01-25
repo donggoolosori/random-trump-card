@@ -3,15 +3,13 @@ import './App.css';
 import Button from '@material-ui/core/Button';
 import { Card } from './card/Card';
 import { makeStyles } from '@material-ui/core';
-import CSS from 'csstype';
 // icon
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 import CardContainer from './components/CardContainer';
+import Counter from './components/Counter';
 
-const backImg =
-  'https://i.pinimg.com/564x/91/69/ef/9169ef73b3564976a7dc564d66861027.jpg';
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
@@ -86,10 +84,7 @@ const App = () => {
   return (
     <div className="App">
       <CardContainer cardSet={cardSet} />
-
-      <div className="counter">
-        <h2>{count}/54</h2>
-      </div>
+      <Counter count={count} />
       <div className="button-container">
         <ArrowBackIosIcon fontSize="large" onClick={prevOnClick} />
         <Button
