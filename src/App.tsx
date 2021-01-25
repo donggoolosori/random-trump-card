@@ -33,13 +33,22 @@ const App = () => {
   // Go to previous card
   const prevOnClick = () => {
     if (cardIndex > 0) {
-      const currentCard: HTMLElement | null = document.querySelector(
-        `.card${cardIndex - 1}`
+      const front: HTMLElement | null = document.querySelector(
+        `.card${cardIndex - 1}.front`
       );
-      currentCard?.setAttribute('style', `z-index:${-cardIndex + 1}`);
+      const back: HTMLElement | null = document.querySelector(
+        `.card${cardIndex - 1}.back`
+      );
+      front?.setAttribute('style', `z-index:${-cardIndex + 1}`);
+      back?.setAttribute('style', `z-index:${-cardIndex + 1}`);
+
+      front?.classList.remove('f-slide-right');
+      back?.classList.remove('b-slide-right');
       setTimeout(() => {
-        currentCard?.classList.remove('slide-left');
-        currentCard?.classList.add('slide-left');
+        front?.classList.remove('f-slide-left');
+        front?.classList.add('f-slide-left');
+        back?.classList.remove('b-slide-left');
+        back?.classList.add('b-slide-left');
       }, 50);
       setCount(count - 1);
       setCardIndex(cardIndex - 1);
