@@ -9,13 +9,16 @@
   position: absolute;
   width: 30vh;
   height: 47vh;
+  /* backface-visibility: hidden; */
+}
+.card {
+  position: absolute;
+  width: 30vh;
+  height: 47vh;
 }
 
 .card-container {
   display: flex;
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   min-width: 30vh;
   min-height: 47vh;
   margin: 30px;

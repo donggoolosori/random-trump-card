@@ -11,6 +11,8 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 
+const backImg =
+  'https://i.pinimg.com/564x/91/69/ef/9169ef73b3564976a7dc564d66861027.jpg';
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
@@ -38,7 +40,7 @@ const App = () => {
       setTimeout(() => {
         currentCard?.classList.remove('slide-left');
         currentCard?.classList.add('slide-left');
-      }, 40);
+      }, 50);
       setCount(count - 1);
       setCardIndex(cardIndex - 1);
     }
@@ -54,7 +56,7 @@ const App = () => {
       setTimeout(() => {
         currentCard?.classList.remove('slide-right');
         currentCard?.classList.toggle('slide-right');
-      }, 40);
+      }, 50);
       setCount(count + 1);
       setCardIndex(cardIndex + 1);
     }
