@@ -17,11 +17,6 @@
   height: 47vh;
   backface-visibility: hidden;
 }
-.card {
-  position: absolute;
-  width: 30vh;
-  height: 47vh;
-}
 
 .card-container {
   display: flex;

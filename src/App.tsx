@@ -79,16 +79,6 @@ const App = () => {
     }
   };
 
-  // Go to a first card
-  const goFirst = () => {
-    setCount(1);
-    setCardIndex(0);
-  };
-  // Go to a last card
-  const goLast = () => {
-    setCount(54);
-    setCardIndex(53);
-  };
   // shuffle card by reloading
   const shuffle = () => {
     window.location.reload();
@@ -125,7 +115,6 @@ const App = () => {
         <h2>{count}/54</h2>
       </div>
       <div className="button-container">
-        <SkipPreviousIcon fontSize="large" onClick={goFirst} />
         <ArrowBackIosIcon fontSize="large" onClick={prevOnClick} />
         <Button
           variant="outlined"
@@ -138,7 +127,6 @@ const App = () => {
           Shuffle
         </Button>
         <ArrowForwardIosIcon fontSize="large" onClick={nextOnClick} />
-        <SkipNextIcon fontSize="large" onClick={goLast} />
       </div>
     </div>
   );
