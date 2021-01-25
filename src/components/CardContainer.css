@@ -17,3 +17,15 @@
   margin-top: 50px;
   margin-bottom: 0;
 }
+.b-slide-right {
+  transform: translateX(120%) rotateY(180deg);
+}
+.b-slide-left {
+  transform: translateX(0%) rotateY(0deg);
+}
+.f-slide-right {
+  transform: translateX(120%) rotateY(0deg);
+}
+.f-slide-left {
+  transform: translateX(0%) rotateY(180deg) !important;
+}

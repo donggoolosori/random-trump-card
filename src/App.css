@@ -8,29 +8,3 @@
   align-items: center;
   padding: 5%;
 }
-
-.button-container {
-  display: flex;
-  align-items: center;
-  margin: 30px;
-  margin-top: 0;
-}
-.btn {
-  cursor: pointer;
-  width: 13vh;
-  padding: 10px;
-  margin: 10px;
-}
-
-.b-slide-right {
-  transform: translateX(120%) rotateY(180deg);
-}
-.b-slide-left {
-  transform: translateX(0%) rotateY(0deg);
-}
-.f-slide-right {
-  transform: translateX(120%) rotateY(0deg);
-}
-.f-slide-left {
-  transform: translateX(0%) rotateY(180deg);
-}

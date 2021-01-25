@@ -1,0 +1,12 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  margin-top: 0;
+}
+.btn {
+  cursor: pointer;
+  width: 13vh;
+  padding: 10px;
+  margin: 10px;
+}
