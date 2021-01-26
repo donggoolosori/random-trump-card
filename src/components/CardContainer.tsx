@@ -1,4 +1,5 @@
 import CSS from 'csstype';
+import { Fragment } from 'react';
 import './CardContainer.css';
 
 const backImg =
@@ -16,22 +17,20 @@ const CardContainer = ({ cardSet }: Props) => {
           zIndex: -idx,
         };
         return (
-          <>
+          <Fragment key={idx}>
             <img
-              key={`f${idx}`}
               className={`front card-img card${idx}`}
               src={process.env.PUBLIC_URL + `/image/${card}.jpg`}
               alt="card"
               style={style}
             />
             <img
-              style={style}
               className={`back card-img card${idx}`}
-              key={`b${idx}`}
               src={backImg}
               alt="back"
+              style={style}
             />
-          </>
+          </Fragment>
         );
       })}
     </div>

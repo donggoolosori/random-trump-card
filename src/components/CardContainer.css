@@ -1,6 +1,10 @@
+.hidden {
+  display: none;
+}
 .front {
   transform: rotateY(180deg);
 }
+
 .card-img {
   /* w : h =~ 2.25 : 3.5 */
   position: absolute;

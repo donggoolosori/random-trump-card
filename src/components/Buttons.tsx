@@ -13,6 +13,8 @@ interface Props {
   setCardIndex: (cardIndex: number) => void;
 }
 
+const delay: number = 50;
+
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
@@ -24,6 +26,12 @@ const Buttons = ({ count, cardIndex, setCount, setCardIndex }: Props) => {
   // Go to previous card
   const prevOnClick = () => {
     if (cardIndex > 0) {
+      if (cardIndex >= 3) {
+        const prevCard: NodeListOf<Element> | null = document.querySelectorAll(
+          `.card${cardIndex - 3}`
+        );
+        prevCard.forEach((el) => el.classList.remove('hidden'));
+      }
       const front: HTMLElement | null = document.querySelector(
         `.card${cardIndex - 1}.front`
       );
@@ -40,14 +48,20 @@ const Buttons = ({ count, cardIndex, setCount, setCardIndex }: Props) => {
         front?.classList.add('f-slide-left');
         back?.classList.remove('b-slide-left');
         back?.classList.add('b-slide-left');
-      }, 50);
+      }, delay);
       setCount(count - 1);
       setCardIndex(cardIndex - 1);
     }
   };
   // Go to next card
   const nextOnClick = () => {
-    if (cardIndex < 53) {
+    if (cardIndex < 54) {
+      if (cardIndex >= 7) {
+        const prevCard: NodeListOf<Element> | null = document.querySelectorAll(
+          `.card${cardIndex - 7}`
+        );
+        prevCard.forEach((el) => el.classList.add('hidden'));
+      }
       const front: HTMLElement | null = document.querySelector(
         `.card${cardIndex}.front`
       );
@@ -64,7 +78,7 @@ const Buttons = ({ count, cardIndex, setCount, setCardIndex }: Props) => {
         front?.classList.add('f-slide-right');
         back?.classList.remove('b-slide-right');
         back?.classList.add('b-slide-right');
-      }, 50);
+      }, delay);
       setCount(count + 1);
       setCardIndex(cardIndex + 1);
     }

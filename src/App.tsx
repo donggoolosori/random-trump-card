@@ -8,7 +8,7 @@ import Counter from './components/Counter';
 const App = () => {
   const [cardSet, setCardSet] = useState(['J1']);
   const [cardIndex, setCardIndex] = useState(0);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   // Set cardset at the first load
   useEffect(() => {
