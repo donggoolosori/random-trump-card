@@ -68,8 +68,8 @@ const Buttons = ({ count, cardIndex, setCount, setCardIndex }: Props) => {
       const back: HTMLElement | null = document.querySelector(
         `.card${cardIndex}.back`
       );
-      front?.setAttribute('style', `z-index:${cardIndex}`);
-      back?.setAttribute('style', `z-index:${cardIndex}`);
+      front?.setAttribute('style', `z-index:${cardIndex - 1000}`);
+      back?.setAttribute('style', `z-index:${cardIndex - 1000}`);
 
       front?.classList.remove('f-slide-left');
       back?.classList.remove('b-slide-left');
