@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/random-trump-card/static/css/main.0f7f9b99.chunk.css",
-    "main.js": "/random-trump-card/static/js/main.0381963d.chunk.js",
-    "main.js.map": "/random-trump-card/static/js/main.0381963d.chunk.js.map",
+    "main.js": "/random-trump-card/static/js/main.f43742cd.chunk.js",
+    "main.js.map": "/random-trump-card/static/js/main.f43742cd.chunk.js.map",
     "runtime-main.js": "/random-trump-card/static/js/runtime-main.415d8d31.js",
     "runtime-main.js.map": "/random-trump-card/static/js/runtime-main.415d8d31.js.map",
     "static/js/2.0d04f27b.chunk.js": "/random-trump-card/static/js/2.0d04f27b.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.415d8d31.js",
     "static/js/2.0d04f27b.chunk.js",
     "static/css/main.0f7f9b99.chunk.css",
-    "static/js/main.0381963d.chunk.js"
+    "static/js/main.f43742cd.chunk.js"
   ]
 }
