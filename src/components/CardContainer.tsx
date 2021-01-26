@@ -20,7 +20,7 @@ const CardContainer = ({ cardSet }: Props) => {
             <img
               key={`f${idx}`}
               className={`front card-img card${idx}`}
-              src={`/image/${card}.jpg`}
+              src={process.env.PUBLIC_URL + `/image/${card}.jpg`}
               alt="card"
               style={style}
             />
